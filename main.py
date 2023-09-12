@@ -39,7 +39,7 @@ def get_exp_name(train_params_, model_params_):
 def get_trainer(nb_epochs, wandb_logger, lr_monitor, exp_name):
     if torch.cuda.is_available():
 
-        trainer = pl.Trainer(gpus=1,
+        trainer = pl.Trainer(,accelerator="auto",
                              max_epochs=nb_epochs,
                              logger=wandb_logger,
                              callbacks=[lr_monitor],
