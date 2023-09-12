@@ -10,8 +10,8 @@ class BNN(pl.LightningModule):
     def __init__(self, train_params):
         super(BNN, self).__init__()
         if train_params['save_acc']:
-            self.accuracy = torchmetrics.Accuracy(task='multiclass', average="none", num_classes=10)
-            self.ECE = torchmetrics.CalibrationError(task='multiclass', n_bins=15, norm='l1')
+            self.accuracy = torchmetrics.Accuracy(task='multiclass',average="none", num_classes=10)
+            self.ECE = torchmetrics.CalibrationError(n_bins=15, norm='l1')
 
     def get_temperature(self):
         return self.train_params['alpha'] * self.train_params['p'] / self.model_params['w']
