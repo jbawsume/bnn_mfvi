@@ -243,7 +243,7 @@ class Resnet20(BNN):
 
         super(Resnet20, self).__init__(train_params)
 
-        self.model_params['N_last_layer'] = 64
+        self.model_params['N_last_layer'] = 1280
         self.seq = nn.Sequential(*create_resnet_seq(dist_params, model_params))
         self.model_params['w'] = self.extract_weights()
         self.do_flatten = False
