@@ -42,8 +42,7 @@ def get_trainer(nb_epochs, wandb_logger, lr_monitor, exp_name):
         trainer = pl.Trainer(accelerator="auto",
                              max_epochs=nb_epochs,
                              logger=wandb_logger,
-                             callbacks=[lr_monitor],
-                             weights_save_path=exp_name)
+                             callbacks=[lr_monitor])
     else:
         trainer = pl.Trainer(max_epochs=nb_epochs, logger=wandb_logger)
     return trainer
