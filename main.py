@@ -83,7 +83,7 @@ parser.add_argument('--vgg_type')
 
 if __name__ == '__main__':
     num_works = 0
-    batch_size = 48
+    batch_size = 128
     wandb.finish()
     args = parser.parse_args()
 

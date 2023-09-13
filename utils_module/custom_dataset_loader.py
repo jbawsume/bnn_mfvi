@@ -27,6 +27,7 @@ class StateFarmDataset(Dataset):
                 torchvision.transforms.ToPILImage(),
                 torchvision.transforms.Resize(128),
                 torchvision.transforms.ToTensor(),
+                torchvision.transforms.transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))])
                 #torchvision.transforms.Normalize(mean=data_norm_mean, std=data_norm_std)
             ])
             image = transform(image)
