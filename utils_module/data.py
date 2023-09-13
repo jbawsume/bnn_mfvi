@@ -29,7 +29,7 @@ def load_data(batch_size, dataset_name, num_works, train_params, model_params):
         train_params['save_acc'] = True
     elif dataset_name == 'STATEFARM':
         train_set, test_set = load_statefarm_dataset(batch_size, num_works)
-        model_params['hin'] = 48   #640 on resnet
+        model_params['hin'] = 52   #640 on resnet
         model_params['in_size'] = 3
         model_params['out_size'] = 10
         train_params['save_acc'] = True
