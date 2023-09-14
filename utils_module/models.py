@@ -383,5 +383,5 @@ class VGG(BNN):
                 seq.append(nn.Flatten())
             else:
                 raise ValueError(f'layer name not find: {layer[0]}')
-        raise ValueError(self)
+        #raise ValueError(self)
         return seq
