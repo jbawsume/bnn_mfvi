@@ -14,7 +14,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 def get_model(model_name, dist_params_, train_params_, model_params_):
 
     if model_name == 'Linear':
-        model_params_['in_size'] = model_params_['in_size'] * model_params_['hin'] ** 2
+        model_params_['in_size'] = 65280 #model_params_['in_size'] * model_params_['hin'] ** 2
         return LinearBnnModel(dist_params_, train_params_, model_params_)
 
     elif model_name == 'Conv':
