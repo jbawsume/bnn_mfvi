@@ -172,3 +172,7 @@ class ConvBnn(LayerBnn):
         else:
             out = F.conv2d(x, w, bias=None, stride=self.stride, padding=self.padding, dilation=self.dilation)
         return out
+        
+    @staticmethod
+    def get_h_out(hin, p, d, k, s):
+        return int((hin + 2 * p - d * (k - 1) - 1) / s + 1)
