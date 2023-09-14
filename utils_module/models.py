@@ -56,7 +56,7 @@ class ConvBnnModel(BNN):
                     init_type='normal'),
             nn.ReLU(),
             nn.Flatten(),
-            LinearBnn(self.model_params['N_last_layer'] * 5476,#h_out ** 2,
+            LinearBnn(self.model_params['N_last_layer'] * 5440,#h_out ** 2,
                       self.model_params['out_size'],
                       self.dist_params['init_rho_post'],
                       self.dist_params['init_mu_post'],
