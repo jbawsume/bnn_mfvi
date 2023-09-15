@@ -327,7 +327,7 @@ class VGG(BNN):
 
         super(VGG, self).__init__(train_params)
 
-        self.model_params['N_last_layer'] = 512
+        self.model_params['N_last_layer'] = 10
         self.seq = nn.Sequential(*self.create_seq(model_params['VGG_type'],
                                                   dist_params,
                                                   model_params['in_size'],
