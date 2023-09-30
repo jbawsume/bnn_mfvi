@@ -1,7 +1,6 @@
 import torch
 from sklearn.preprocessing import StandardScaler
 from torch.utils.data import DataLoader
-from torch.utils.data import DataLoader
 from torchvision import transforms
 from torchvision.datasets import MNIST, CIFAR10
 from torchvision.transforms import Compose
